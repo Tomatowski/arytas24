@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arytas24 - Zandberg ujawnia, kogo poprze w drugiej turze</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
+  <link rel="icon" href="icon.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lexend', sans-serif;
+      background-color: #f9f9f9;
+      color: #04080F;
+    }
+
+    header {
+      background-color: #507DBC;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        margin: 5px 0;
+      }
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #507DBC;
+      font-size: 2em;
+      margin-top: 0;
+    }
+
+    .article-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 15px 0;
+      object-fit: cover;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #507DBC;
+      margin: 20px 0;
+      padding-left: 15px;
+      border-left: 3px solid #A1C6EA;
+      font-size: 1.4em;
+    }
+
+    .author {
+      text-align: right;
+      font-size: 0.9em;
+      color: gray;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      background-color: #BBD1EA;
+      margin-top: 30px;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .articles-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .article-card {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .article-card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .article-image {
+      width: 150px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .article-content {
+      padding: 15px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    .article-title {
+      margin: 0 0 10px 0;
+      font-size: 1.3em;
+      color: #507DBC;
+    }
+
+    .article-excerpt {
+      font-size: 1em;
+      color: #333333;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .read-more {
+      align-self: flex-start;
+      font-weight: bold;
+      color: #04080F;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .read-more:hover {
+      border-color: #507DBC;
+    }
+
+    @media (max-width: 600px) {
+      .article-card {
+        flex-direction: column;
+      }
+
+      .article-image {
+        width: 100%;
+        height: 180px;
+      }
+
+      .article-content {
+        padding: 15px;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      body {
+        font-size: 20px;
+      }
+
+      header {
+        padding: 25px 50px;
+      }
+
+      .logo-text {
+        font-size: 38px;
+      }
+
+      nav a {
+        font-size: 18px;
+        margin: 0 20px;
+      }
+
+      .container {
+        max-width: 1400px;
+        padding: 40px;
+      }
+
+      h1 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.4em;
+      }
+
+      .article-card {
+        font-size: 1.3em;
+      }
+
+      .article-title {
+        font-size: 1.6em;
+      }
+
+      .article-image {
+        width: 250px;
+      }
+        .clickable {
+  color: inherit;         /* dziedziczy kolor z otoczenia */
+  text-decoration: none;  /* usuwa podkreślenie */
+
+}
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="clickable">
+    <div class="logo-container">
+      <div class="logo-text">Arytas</div>
+      <img src="icon.png" height="40"/>
+    </div>
+  </a>
+    <nav>
+      <a href="index.html">Strona główna</a>
+      <a href="https://www.youtube.com/watch?v=dzntyCTgJMQ">Polityka</a>
+      <a href="https://www.youtube.com/watch?v=dzntyCTgJMQ">Społeczeństwo</a>
+      <a href="https://www.youtube.com/watch?v=dzntyCTgJMQ">Kontakt</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Adrian Zandberg ujawnia, kogo poprze w drugiej turze</h1>
+    <img src="art1.jpg" alt="Zdjęcie Cwela Zandberg" class="article-img" />
+    <p>
+      W najnowszym wywiadzie, który wzbudził niemałe poruszenie wśród obserwatorów sceny politycznej, Adrian Zandberg udzielił odpowiedzi na jedno z najbardziej palących pytań tej kampanii wyborczej – kogo poprze w drugiej turze wyborów prezydenckich. Jego odpowiedź była zaskakująco krótka, a zarazem intrygująca.
+    </p>
+    <div class="quote">– Nick Omu – odpowiedział Adrian Zandberg.</div>
+    <p>
+      Te dwa słowa wywołały prawdziwą burzę spekulacji i domysłów. Kim jest ten tajemniczy kandydat? Redakcja Arytas24 nie pozostała bierna i rozpoczęła gorączkowe śledztwo mające na celu rozwikłanie tej zagadki.
+    </p>
+    <p>
+      Po ponad dwudziestu siedmiu godzinach nieustannych poszukiwań, kontaktów i rozmów z różnymi źródłami, nasza redakcja nie zdołała odnaleźć jakichkolwiek informacji potwierdzających istnienie Nicka Omu jako realnego kandydata. To jednak nie powstrzymało nas od dalszych spekulacji i prób interpretacji wypowiedzi Zandberga.
+    </p>
+    <div class="quote">
+      – Zandberg może próbować nam przekazać, że wybory były sfałszowane – sugeruje dziennikarz Tomasz Problem z Arytas24.
+    </div>
+    <p>
+      Brak jakichkolwiek śladów Nicka Omu w oficjalnych sondażach oraz mediach sugeruje, że być może kandydat ten był celowo ignorowany lub wręcz sabotowany przez konkurencyjne ugrupowania polityczne i cenzurowany przez mainstreamowe media. Wśród członków naszej redakcji aż 33% przyznało, że ich zdaniem Nick Omu mógł zdobyć znaczące poparcie społeczne, którego oficjalne źródła nie odzwierciedlają.
+    </p>
+    <div class="quote">
+      – Nick Omu oddałem głos. – twierdzi dziennikarz Adam Ciwryj z Arytas24.
+    </div>
+    <p>
+      Czy Nick Omu to rzeczywiście kandydat, którego wszyscy przeoczyli, czy może po prostu chodzi o słowo „nikomu”, które Zandberg użył, by wyrazić swoją niechęć wobec obu rywali? Czas pokaże. Tymczasem ta zagadka polityczna pozostaje otwarta, a my bacznie będziemy obserwować kolejne ruchy na scenie wyborczej.
+    </p>
+    <footer>© 2025 Arytas24. Wszelkie absurdy zastrzeżone.</footer>
+  </div>
+</body>
+</html>
